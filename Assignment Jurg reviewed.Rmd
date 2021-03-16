@@ -2,7 +2,11 @@
 title: "Assigment - kNN DIY"
 author:
   - Jurg Jacobs (665156) - Author
+<<<<<<< HEAD
+  - Rob van der Wielen (665160) - Reviewer.
+=======
   - Rob van der Wielen (studentnummer) - Reviewer
+>>>>>>> 507308b17918289b6b0b107b562e8c4e85797a8e
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
    html_notebook:
