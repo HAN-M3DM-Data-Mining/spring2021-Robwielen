@@ -10,7 +10,7 @@ output:
     toc_depth: 2
 ---
 
-# Jurg managed to find all the (on purpse) mistakes. The mistakes that jurg found are in <FONT COLOR="#009933">green</FONT>. At the bottom of the page I reacted on the evaluation of Jurg.  
+# Jurg managed to find all the mistakes that were put in the file on purpose. The mistakes that jurg found are in <FONT COLOR="#009933">green</FONT>. At the bottom of the page I reacted on the evaluation of Jurg.  
 
 ```{r message=TRUE, warning=TRUE, include=FALSE}
 library(tidyverse)
