@@ -10,6 +10,8 @@ output:
     toc_depth: 2
 ---
 
+# Jurg managed to find all the (on purpse) mistakes. The mistakes that jurg found are in <FONT COLOR="#009933">green</FONT>. At the bottom of the page I reacted on the evaluation of Jurg.  
+
 ```{r message=TRUE, warning=TRUE, include=FALSE}
 library(tidyverse)
 library(tm)
@@ -34,7 +36,7 @@ head(rawDF)
 ```
 
 <body>
- <h1 style="color:#FF0000";> Changed the column numbers that we want to get rid of. -2 has to be -1. </h1>
+ <h3 style="color:#009933";> Changed the column numbers that we want to get rid of. -2 has to be -1. </h3>
  </body>
 
 ```{r}
@@ -60,7 +62,7 @@ cleanDF
 Build a wordcloud
 
 <body>
- <h1 style="color:#FF0000";> If I ran the chunk in the document I only got the words "Unreliable" and "Reliable. So I changed the code for the wordcloud to get the output of the titles instead of the labels. </h1>
+ <h3 style="color:#009933";> If I ran the chunk in the document I only got the words "Unreliable" and "Reliable. So I changed the code for the wordcloud to get the output of the titles instead of the labels. </h3>
  </body>
 
 ```{r}
@@ -108,7 +110,7 @@ inspect(cleanDTM)
 Split dataset into training and testing.
 
 <body>
- <h1 style="color:#FF0000";> Times = 2 is false. Needs to be Times = 1. </h1>
+ <h3 style="color:#009933";> Times = 2 is false. Needs to be Times = 1. </h3>
  </body>
 
 ```{r}
@@ -166,9 +168,11 @@ The model has an accuracy of 92,7%, which is a good result for the model.
 
 There are still quite a lot of cases where the model wrongly said that the article was unreliable,so the model than classifies the article as unreliable while it is reliable. This happened about 10.8% of the time. The other way around, so when it actually was unreliable but the model predicted it was reliable, happened around 3.4% of the time.
 
-<body>
- <h1 style="color:#FF0000";> I do not totally agree with Jurg. I agree that false positives are bad, because people get shown news that is unreliable. But the other way around is just as bad I think. Than the model predicts it is unreliable and it probably will be filtered out, but the article is actually reliable and people do not get to see the reliable news.</h1>
- </body>
 
 ## Extra Evaluation and Deployment 
 In this case, it is better to have False Negatives, because information which was predicted to be unreliable will not be shown to users of, for example, Facebook. False Positives would be shown to users, based on the prediction of the model, what is in fact unreliable information. This false information could influence the opinion of people and then could lead to bigger misunderstandings.  
+
+
+<body>
+ <h3 style="color:#009933";> I do not totally agree with Jurg. I agree that false positives are bad, because people get shown news that is unreliable. But the other way around is just as bad I think. Than the model predicts it is unreliable and it probably will be filtered out, but the article is actually reliable and people do not get to see the reliable news.</h3>
+ </body>

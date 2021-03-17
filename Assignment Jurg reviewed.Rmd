@@ -2,11 +2,7 @@
 title: "Assigment - kNN DIY"
 author:
   - Jurg Jacobs (665156) - Author
-<<<<<<< HEAD
   - Rob van der Wielen (665160) - Reviewer.
-=======
-  - Rob van der Wielen (studentnummer) - Reviewer
->>>>>>> 507308b17918289b6b0b107b562e8c4e85797a8e
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
    html_notebook:
@@ -14,6 +10,8 @@ output:
     toc_depth: 2
 ---
 
+
+# The (on purpose) mistakes and the points of improvement that were found are in <FONT COLOR="FF0000">red</FONT>. 
 
 ```{r}
 library(tidyverse)
@@ -34,7 +32,7 @@ To fight the Hepatitis C, people can donate their blood. This blood must not con
 
 
 <body>
-  <h1 style="color:#FF0000";>What is the goal of you analysis?</h1>
+  <h3 style="color:#FF0000";>What is the goal of you analysis?</h3>
 </body>
 
 ## Data Understanding
@@ -62,7 +60,7 @@ cleanDF <- cleanDF[rows, ]
 ```
 
  <body>
- <h1 style="color:#FF0000";> Fault 1. It said 10 instead of 100 and 0 instead of 1. This means that there were no percentages.</h1>
+ <h3 style="color:#FF0000";> Fault 1. It said 10 instead of 100 and 0 instead of 1. This means that there were no percentages.</h3>
  </body>
 
 ```{r}
@@ -74,7 +72,7 @@ propDiag
 ```
 
  <body>
- <h1 style="color:#FF0000";> You already unpacked tidyverse. Not necessary to do it again.</h1>
+ <h3 style="color:#FF0000";> You already unpacked tidyverse. Not necessary to do it again.</h3>
  </body>
  
 ```{r}
@@ -91,7 +89,7 @@ summary(cleanDF[c("ALB", "ALP", "ALT", "AST")])
 ```
 
  <body>
- <h1 style="color:#FF0000";> Fault 2. It was 1 instead of 10. Otherwise you don't see differences. In the testSet2</h1>
+ <h3 style="color:#FF0000";> Fault 2. It was 1 instead of 10. Otherwise you don't see differences. In the testSet2</h3>
  </body>
  
  
@@ -115,7 +113,7 @@ cat("Normalized testSet1:", normalize(testSet1), "\n")
 cat("Normalized testSet2:", normalize(testSet2))
 ```
   <body>
- <h1 style="color:#FF0000";> Fault 3. after dim(cleanDF) there needs to be a 2 instead of a 4. You need to normalize the columns</h1>
+ <h3 style="color:#FF0000";> Fault 3. after dim(cleanDF) there needs to be a 2 instead of a 4. You need to normalize the columns</h3>
  </body>
 
 ```{r}
@@ -164,7 +162,9 @@ In this case, the model is important because 3% of the people who were predicted
 97% of the cases were predicted correctly, in which 94% were actually a donor and 3% have Hepatitis C. 
 
 ## reviewer adds suggestions for improving the model
-I think the way Jurg worked was good and he got a nice model. But I think the conclusions could be better. I think I found all the mistakes. This is my conclusion: 
+I think the way Jurg worked was good and he got a nice model. But I think the conclusions could be better. I think I found all the mistakes. 
+
+This is my conclusion: 
 
 I merged the categories SuspectDonor and Donor, so that we are left with only two variables. This gives a better overview. The accuracy of the model is 92%. 
 
